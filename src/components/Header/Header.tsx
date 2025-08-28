@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ThemeToggleButton from "../customui/ThemeToggleButton";
+import { AuroraText } from "../magicui/aurora-text";
 
 const Header = () => {
 	return (
@@ -11,12 +12,14 @@ const Header = () => {
 					<h1
 						className="text-2xl font-semibold"
 						aria-label="App Name">
-						NST App
+						<AuroraText>Counter App</AuroraText>
 					</h1>
 				</Link>
 
 				<nav className="flex items-center gap-4">
-					<Link href={"/"}>Home</Link>
+					<Link href={"/"}>Basic</Link>
+					<Link href={"/intermediate"}>Intermediate</Link>
+					<Link href={"/expert"}>Expert</Link>
 
 					<ThemeToggleButton />
 				</nav>
