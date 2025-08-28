@@ -1,20 +1,30 @@
-import { AuroraText } from "@/components/magicui/aurora-text";
+import BasicCounter from "@/components/BasicCounter";
+import {
+	Card,
+	CardContent,
+	CardHeader,
+	CardTitle,
+} from "@/components/shadcnui/card";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Home | Nextjs Starter Template",
-	description: "Home page of Nextjs Starter Template",
+	title: "Basic | Counter App",
+	description: "Basic Counter App",
 };
 
 const page = () => {
 	return (
-		<>
-			<section className="grid h-[80dvh] place-items-center">
-				<AuroraText className="text-5xl font-bold">
-					Nextjs Starter Template
-				</AuroraText>
-			</section>
-		</>
+		<section className="grid h-[80dvh] place-items-center">
+			{/****** Basic Counter Card ***** */}
+			<Card className="w-xs">
+				<CardHeader className="text-center text-2xl font-bold">
+					<CardTitle>Basic Counter App</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<BasicCounter />
+				</CardContent>
+			</Card>
+		</section>
 	);
 };
 
